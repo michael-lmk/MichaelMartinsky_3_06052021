@@ -4,6 +4,10 @@ $second_color: #FF79DA;
 $tertiary_color: #99E2D0;
 $footer-color: rgb(63, 63, 63);
 
+@mixin box-shadow ($color: rgba(0, 0, 0, 0.2)) {
+    box-shadow: 0px 1px 30px 1px $color;
+}
+
 
 html{
     font-family: 'Roboto', sans-serif;
@@ -38,7 +42,7 @@ main{
         justify-content: center;
         display: flex;
         padding: 10px;
-        box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
+       @include box-shadow;
         z-index: 100;
         .logo-app{
             width: 50%;
@@ -62,6 +66,9 @@ main{
         width: 11em;
         background-color: rgb(233, 233, 233);
         font-size: 15px;
+    }
+    &__img-resto{
+        z-index: -5;
     }
 
 }
@@ -214,4 +221,47 @@ main{
 
 .fas{
     padding-right: 10px;
+}
+
+
+/***********************/
+/*     Partie Menu     */
+/***********************/
+
+.menu{
+    z-index: 200;
+    background-color:#f8f8f8;
+    margin-top: -3.2em;
+    border-top-left-radius: 40px ;
+    border-top-right-radius: 40px ;
+    padding: 1em;
+    p{
+        margin: 0;
+    }
+    h3{
+        margin-bottom: 5px;
+    }
+    &__resto{
+        font-size: 18px;
+    }
+    &__item{
+        background-color: rgb(247, 247, 247);
+        padding: 10px;
+        margin: 10px;
+        border-radius: 15px;
+        @include box-shadow($color: #d4d4d4cb);
+    }
+    &__text{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 14px;
+        
+    }
+    &__title{
+        border-bottom: 3px solid $tertiary_color;
+        width: 50px;
+        
+    }
+    
 }
