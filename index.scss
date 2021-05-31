@@ -1,8 +1,11 @@
 //couleur 
-$primary_color: #9356DC;
-$second_color: #FF79DA;
+$primary_color: #9356dc;
+$second_color: #ff79da;
 $tertiary_color: #99E2D0;
 $footer-color: rgb(63, 63, 63);
+$btn-color:  linear-gradient($second_color, $primary_color );
+$btn-color-lighten: linear-gradient(lighten($second_color,10%), lighten($primary_color,10%) );
+
 
 @mixin box-shadow ($color: rgba(0, 0, 0, 0.2)) {
     box-shadow: 0px 1px 30px 1px $color;
@@ -44,9 +47,11 @@ main{
         padding: 10px;
        @include box-shadow;
         z-index: 100;
+        
         .logo-app{
             width: 50%;
         }
+
     }
 
     &__location{
@@ -69,6 +74,12 @@ main{
     }
     &__img-resto{
         z-index: -5;
+    }
+    &__icon{
+        position: absolute;
+        left: 15px;
+        top: 17px;
+        color: black;
     }
 
 }
@@ -100,12 +111,27 @@ main{
 
 .btn{
     color: white;
-    background: linear-gradient($second_color, $primary_color );;
+    background: $btn-color;
     text-decoration: none;
     padding: 1em;
     border-radius: 80em;
     box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    border: none;
+    &:active, &:hover{
+        background: $btn-color-lighten;
+    }
 }
+
+.order{
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    &__btn{
+        padding-left: 3em ;
+        padding-right: 3em ;
+    }
+}
+
 
 .operation{
     margin: 1em;
