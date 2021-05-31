@@ -1,0 +1,217 @@
+//couleur 
+$primary_color: #9356DC;
+$second_color: #FF79DA;
+$tertiary_color: #99E2D0;
+$footer-color: rgb(63, 63, 63);
+
+
+html{
+    font-family: 'Roboto', sans-serif;
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    body{
+    margin: 0;
+    padding: 0;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+    }
+}
+
+h1{
+    font-family: 'Shrikhand', cursive !important;
+}
+
+main{
+    flex: 1;
+}
+
+
+.header{
+
+    &__img{
+        flex: 1;
+        justify-content: center;
+        display: flex;
+        padding: 10px;
+        box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
+        z-index: 100;
+        .logo-app{
+            width: 50%;
+        }
+    }
+
+    &__location{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(233, 233, 233);
+    }
+
+    &__show-resto{
+        display: flex;
+        flex-direction: column;
+    }
+    &__input{
+        border: none;
+        height: 40px;
+        width: 11em;
+        background-color: rgb(233, 233, 233);
+        font-size: 15px;
+    }
+
+}
+
+.home{
+    background-color: rgb(243, 243, 243);
+    &__title{
+        margin-left: 4em;
+        margin-right: 4em;
+        text-align: center;
+        margin-block-start: 1.5em;
+    }
+    &__para{
+        margin-left: 3em;
+        margin-right: 3em;
+        text-align: center;
+    }
+    &__resto{
+        margin: 1em;
+        margin-bottom: 4em;
+        text-align: center;
+    }
+}
+
+.button-resto{
+    padding: 1em;
+    background-color: lightgray;
+}
+
+.btn{
+    color: white;
+    background: linear-gradient($second_color, $primary_color );;
+    text-decoration: none;
+    padding: 1em;
+    border-radius: 80em;
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.operation{
+    margin: 1em;
+
+    &__item{
+        margin: 1em;
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+        background-color: whitesmoke;
+        padding: 12px 0px;
+        box-shadow: 1px 1px 10px 2px rgba(92, 92, 92, 0.2);
+        &:focus,
+        &:hover{
+            background-color: #f7f1fd;
+            .fas-icon{
+                color: $primary_color;
+            }
+        }
+        
+
+        .num-step{
+            display: flex;
+            background-color: $primary_color;
+            color: white;
+            padding: 5px;
+            margin: 5px 1em ;
+            border-radius: 50px;
+            width: 15px;
+            height: 15px;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        
+    }
+    .item__step{
+        display: flex;
+        align-items: center;
+        margin-left: -27px;
+        font-size: 1em;
+    
+    }
+}
+
+.step{
+    margin: 0 1em;
+}
+
+.resto{
+    margin: 1em;
+}
+
+.restaurant{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    filter: drop-shadow(0 0 0.90rem  rgb(153, 153, 153) );
+    height: 250px;
+    margin-bottom: 2em!important;
+    text-decoration: none;
+    color: black;
+    &__new{
+        position: absolute;
+        background-color: rgb(120, 221, 183);
+        right: 10px;
+        top: 10px;
+        padding: 5px 13px;
+        font-size: 15px;
+        color:rgb(43, 129, 72)
+    }
+    &__images{
+        display: flex;
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+
+    }
+    &__name{
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        flex-direction: column;
+        background-color: white;
+        padding-left: 1em;
+    
+    }
+    &__heart{
+        position: absolute;
+        right: 2em;
+        text-decoration: none;
+        color: $primary_color;
+        
+        
+        
+    }
+}
+
+.footer{
+    background-color: $footer-color;
+    &__logo{
+        width: 110px;
+        padding-bottom: 1em;
+    }  
+    &__content{
+        color: white;
+        margin: 0.3em 0em  ;
+    }
+}
+
+.fas{
+    padding-right: 10px;
+}

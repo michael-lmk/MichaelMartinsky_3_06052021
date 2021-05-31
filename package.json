@@ -1,0 +1,19 @@
+{
+  "name": "p3_martinsky_michael",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./index.scss:./index_compiler.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michael-lmk/MichaelMartinsky_3_06052021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michael-lmk/MichaelMartinsky_3_06052021/issues"
+  },
+  "homepage": "https://github.com/michael-lmk/MichaelMartinsky_3_06052021#readme"
+}
