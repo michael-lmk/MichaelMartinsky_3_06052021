@@ -74,6 +74,21 @@
     transform: scaleY(0.12);
   }
 }
+/**
+ * Fait disparaitre la div du loader
+ *
+ */
+@keyframes display-loader {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
 html {
   font-family: "Roboto", sans-serif;
 }
@@ -110,6 +125,8 @@ main {
   padding: 10px;
   box-shadow: 0px 1px 30px 1px rgba(0, 0, 0, 0.2);
   z-index: 100;
+  position: fixed;
+  background-color: white;
 }
 .header__img .logo-app {
   width: 50%;
@@ -133,6 +150,7 @@ main {
 }
 .header__img-resto {
   z-index: -5;
+  padding-top: 50px;
 }
 .header__icon {
   position: absolute;
@@ -330,7 +348,6 @@ main {
   flex-direction: row;
   justify-content: space-between;
   animation: animation-menu-item 1500ms both;
-  animation-delay: 200ms;
 }
 .menu__item--1 {
   animation-delay: 150ms;
@@ -430,7 +447,7 @@ main {
   background-color: #99E2D0;
   height: 100%;
   width: 3vh;
-  animation: loader-bars 2000ms both infinite ease-in-out;
+  animation: loader-bars 2000ms both 3 ease-in-out;
   animation-delay: 200ms;
 }
 .load__bar--1 {
@@ -456,6 +473,22 @@ main {
 }
 .load__bar--8 {
   animation-delay: 1000ms;
+}
+
+.container-loader {
+  position: fixed;
+  background-color: white;
+  z-index: 200;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: display-loader 2s;
+  animation-delay: 6000ms;
+  animation-fill-mode: forwards;
+  transform-origin: top;
+  top: 41px;
 }
 
 .fas {

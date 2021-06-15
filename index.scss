@@ -116,6 +116,28 @@ $anim-delay: ($anim-dur/2) / $num-bars;
     }
 }
 
+/**
+ * Fait disparaitre la div du loader
+ *
+ */
+ 
+// Delay avant la disparition du loader
+$loader-anim-delay :$anim-dur*3;
+@keyframes display-loader {
+    0%{
+        opacity: 1;
+        
+    }
+    99%{
+        opacity: 0;
+       
+    }
+    100%{
+        
+        transform: scaleY(0);
+    }
+}
+
 
 html{
     font-family: 'Roboto', sans-serif;
@@ -124,8 +146,9 @@ html{
         flex-direction: column;
     }
     body{
-    margin: 0;
-    padding: 0;
+        margin: 0;
+        padding: 0;
+        
     }
     footer{
         display: flex;
@@ -160,7 +183,8 @@ main{
         .logo-app{
             width: 50%;
         }
-
+        position: fixed;
+        background-color: white;
 
     }
 
@@ -184,6 +208,7 @@ main{
     }
     &__img-resto{
         z-index: -5;
+        padding-top: 50px;
     }
     &__icon{
         position: absolute;
@@ -400,7 +425,7 @@ main{
         flex-direction: row;
         justify-content: space-between;
         animation: animation-menu-item $anim-dur-item both ;
-        animation-delay: 200ms;
+        
         
         
         @for $x from 1 through $num-item {
@@ -494,7 +519,7 @@ main{
         background-color: $tertiary_color;
         height: 100%;
         width: $size;
-        animation: loader-bars $anim-dur both infinite ease-in-out;
+        animation: loader-bars $anim-dur both 3 ease-in-out;
         animation-delay: 200ms;
         
         
@@ -507,6 +532,21 @@ main{
 }
 
 
+.container-loader{
+    position: fixed;
+    background-color: white;
+    z-index: 200;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: display-loader 2s  ;
+    animation-delay: $loader-anim-delay;
+    animation-fill-mode: forwards;
+    transform-origin: top;
+    top: 41px;
+}
 
 .fas{
     padding-left: 10px;
