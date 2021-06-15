@@ -350,34 +350,34 @@ main {
   animation: animation-menu-item 1500ms both;
 }
 .menu__item--1 {
-  animation-delay: 150ms;
+  animation-delay: 6350ms;
 }
 .menu__item--2 {
-  animation-delay: 300ms;
+  animation-delay: 6500ms;
 }
 .menu__item--3 {
-  animation-delay: 450ms;
+  animation-delay: 6650ms;
 }
 .menu__item--4 {
-  animation-delay: 600ms;
+  animation-delay: 6800ms;
 }
 .menu__item--5 {
-  animation-delay: 750ms;
+  animation-delay: 6950ms;
 }
 .menu__item--6 {
-  animation-delay: 900ms;
+  animation-delay: 7100ms;
 }
 .menu__item--7 {
-  animation-delay: 1050ms;
+  animation-delay: 7250ms;
 }
 .menu__item--8 {
-  animation-delay: 1200ms;
+  animation-delay: 7400ms;
 }
 .menu__item--9 {
-  animation-delay: 1350ms;
+  animation-delay: 7550ms;
 }
 .menu__item--10 {
-  animation-delay: 1500ms;
+  animation-delay: 7700ms;
 }
 
 .item {

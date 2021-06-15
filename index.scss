@@ -430,7 +430,7 @@ main{
         
         @for $x from 1 through $num-item {
             &--#{$x} {
-                animation-delay: $anim-delay-item * $x;
+                animation-delay: $loader-anim-delay+200ms+($anim-delay-item * $x);
              }
         }
     }
