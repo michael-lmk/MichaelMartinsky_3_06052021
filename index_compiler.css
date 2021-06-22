@@ -74,6 +74,34 @@
     transform: scaleY(0.12);
   }
 }
+.load__bar--front {
+  transform: rotateY(0deg) translateZ(100px);
+}
+
+.load__bar--right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.load__bar--back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+.load__bar--left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.load__bar--top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.load__bar--bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+.test-load-3d {
+  transform: rotate(20deg);
+}
+
 /**
  * Fait disparaitre la div du loader
  *
@@ -95,6 +123,7 @@ html {
 html header {
   display: flex;
   flex-direction: column;
+  overflow-y: hidden;
 }
 html body {
   margin: 0;
@@ -126,6 +155,7 @@ main {
   box-shadow: 0px 1px 30px 1px rgba(0, 0, 0, 0.2);
   z-index: 100;
   position: fixed;
+  width: 100%;
   background-color: white;
 }
 .header__img .logo-app {
@@ -157,6 +187,11 @@ main {
   left: 15px;
   top: 17px;
   color: black;
+}
+
+.no-fixe {
+  position: relative !important;
+  overflow-x: hidden;
 }
 
 .home {
@@ -217,7 +252,7 @@ main {
   border-radius: 15px;
   background-color: whitesmoke;
   padding: 12px 0px;
-  box-shadow: 1px 1px 10px 2px rgba(92, 92, 92, 0.2);
+  box-shadow: 0px 1px 10px 1px rgba(92, 92, 92, 0.2);
 }
 .operation__item:focus, .operation__item:hover {
   background-color: #f7f1fd;
@@ -290,9 +325,22 @@ main {
 }
 .restaurant__heart {
   position: absolute;
-  right: 2em;
+  right: 3em;
+  bottom: 3em;
   text-decoration: none;
   color: #9356dc;
+}
+
+.restaurant__heart--2 {
+  display: none !important;
+  position: absolute;
+}
+.restaurant__heart--1 {
+  display: flex !important;
+  position: absolute;
+}
+.restaurant__heart:focus .restaurant__heart--2, .restaurant__heart:hover .restaurant__heart--2 {
+  display: flex !important;
 }
 
 .footer {
@@ -350,34 +398,34 @@ main {
   animation: animation-menu-item 1500ms both;
 }
 .menu__item--1 {
-  animation-delay: 6350ms;
+  animation-delay: 6450ms;
 }
 .menu__item--2 {
-  animation-delay: 6500ms;
+  animation-delay: 6600ms;
 }
 .menu__item--3 {
-  animation-delay: 6650ms;
+  animation-delay: 6750ms;
 }
 .menu__item--4 {
-  animation-delay: 6800ms;
+  animation-delay: 6900ms;
 }
 .menu__item--5 {
-  animation-delay: 6950ms;
+  animation-delay: 7050ms;
 }
 .menu__item--6 {
-  animation-delay: 7100ms;
+  animation-delay: 7200ms;
 }
 .menu__item--7 {
-  animation-delay: 7250ms;
+  animation-delay: 7350ms;
 }
 .menu__item--8 {
-  animation-delay: 7400ms;
+  animation-delay: 7500ms;
 }
 .menu__item--9 {
-  animation-delay: 7550ms;
+  animation-delay: 7650ms;
 }
 .menu__item--10 {
-  animation-delay: 7700ms;
+  animation-delay: 7800ms;
 }
 
 .item {
@@ -449,6 +497,7 @@ main {
   width: 3vh;
   animation: loader-bars 2000ms both 3 ease-in-out;
   animation-delay: 200ms;
+  transform: perspective(200px);
 }
 .load__bar--1 {
   animation-delay: 125ms;
