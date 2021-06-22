@@ -485,7 +485,7 @@ main{
 
 .item{
     overflow: hidden;
-    width: 51vh;
+    width: 100%;
     position: relative;
     &__desc{
         
@@ -587,7 +587,7 @@ main{
     animation-delay: $loader-anim-delay;
     animation-fill-mode: forwards;
     transform-origin: top;
-    top: 50px;
+    
 }
 
 .fas{

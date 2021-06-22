@@ -407,7 +407,7 @@ main {
 
 .item {
   overflow: hidden;
-  width: 51vh;
+  width: 100%;
   position: relative;
 }
 .item__desc {
@@ -514,7 +514,6 @@ main {
   animation-delay: 6000ms;
   animation-fill-mode: forwards;
   transform-origin: top;
-  top: 50px;
 }
 
 .fas {
