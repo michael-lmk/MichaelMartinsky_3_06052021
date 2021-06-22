@@ -184,6 +184,7 @@ main{
         flex: 1;
         justify-content: center;
         display: flex;
+        padding: 11px;
        @include box-shadow;
         z-index: 100;
         position: fixed;
