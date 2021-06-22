@@ -123,17 +123,6 @@ $anim-delay: ($anim-dur/2) / $num-bars;
 }
 
 
-.load__bar--front  { transform: rotateY(  0deg) translateZ(100px); }
-.load__bar--right  { transform: rotateY( 90deg) translateZ(100px); }
-.load__bar--back   { transform: rotateY(180deg) translateZ(100px); }
-.load__bar--left   { transform: rotateY(-90deg) translateZ(100px); }
-.load__bar--top    { transform: rotateX( 90deg) translateZ(100px); }
-.load__bar--bottom { transform: rotateX(-90deg) translateZ(100px); }
-
-.test-load-3d{
-    transform: rotate(20deg);
-}
-
 /**
  * Fait disparaitre la div du loader
  *
@@ -250,7 +239,7 @@ main{
         margin-left: 4em;
         margin-right: 4em;
         text-align: center;
-        margin-block-start: 1.5em;
+        margin-top: 1.5em;
     }
     &__para{
         margin-left: 3em;
@@ -396,18 +385,24 @@ main{
 .restaurant__heart{
  
     &--2{
-        display: none!important;
+        display: flex!important;
         position: absolute;
+        color: white;
+        z-index: 1;
+        
+        
     }
     &--1{
         display: flex!important;
         position: absolute;
+        z-index: 2;
     }
     &:focus,
     &:hover{
         .restaurant__heart--2{
             display: flex!important;
-            
+            color: $primary_color;
+            transition: all linear 0.2s;
         }
         
     }
@@ -592,7 +587,7 @@ main{
     animation-delay: $loader-anim-delay;
     animation-fill-mode: forwards;
     transform-origin: top;
-    top: 41px;
+    top: 50px;
 }
 
 .fas{
