@@ -374,11 +374,9 @@ main{
     &__heart{
         position: absolute;
         right: 3em;
-        bottom: 3em;
+        bottom: 3.5em;
         text-decoration: none;
         color: $primary_color;
-      
-        
     }
 }
 
@@ -396,13 +394,19 @@ main{
         display: flex!important;
         position: absolute;
         z-index: 2;
+        background: -webkit-gradient(linear, left bottom, right top, from($primary_color), to($second_color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     &:focus,
     &:hover{
         .restaurant__heart--2{
             display: flex!important;
-            color: $primary_color;
+            //color: $primary_color;
             transition: all linear 0.2s;
+            background: -webkit-gradient(linear, left bottom, right top, from($primary_color), to($second_color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         
     }
@@ -452,6 +456,7 @@ main{
     }
     &__resto{
         font-size: 18px;
+        position: relative;
     }
         
     &__title{
