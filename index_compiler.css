@@ -381,34 +381,34 @@ main {
   animation: animation-menu-item 1500ms both;
 }
 .menu__item--1 {
-  animation-delay: 450ms;
+  animation-delay: 4450ms;
 }
 .menu__item--2 {
-  animation-delay: 600ms;
+  animation-delay: 4600ms;
 }
 .menu__item--3 {
-  animation-delay: 750ms;
+  animation-delay: 4750ms;
 }
 .menu__item--4 {
-  animation-delay: 900ms;
+  animation-delay: 4900ms;
 }
 .menu__item--5 {
-  animation-delay: 1050ms;
+  animation-delay: 5050ms;
 }
 .menu__item--6 {
-  animation-delay: 1200ms;
+  animation-delay: 5200ms;
 }
 .menu__item--7 {
-  animation-delay: 1350ms;
+  animation-delay: 5350ms;
 }
 .menu__item--8 {
-  animation-delay: 1500ms;
+  animation-delay: 5500ms;
 }
 .menu__item--9 {
-  animation-delay: 1650ms;
+  animation-delay: 5650ms;
 }
 .menu__item--10 {
-  animation-delay: 1800ms;
+  animation-delay: 5800ms;
 }
 
 .item {
@@ -514,7 +514,7 @@ main {
   justify-content: center;
   align-items: center;
   animation: display-loader 2s;
-  animation-delay: 0ms;
+  animation-delay: 4000ms;
   animation-fill-mode: forwards;
   transform-origin: top;
 }

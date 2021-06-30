@@ -129,7 +129,7 @@ $anim-delay: ($anim-dur/2) / $num-bars;
  */
  
 // Delay avant la disparition du loader
-$loader-anim-delay :$anim-dur*0;
+$loader-anim-delay :$anim-dur*2;
 @keyframes display-loader {
     0%{
         opacity: 1;
