@@ -129,7 +129,7 @@ $anim-delay: ($anim-dur/2) / $num-bars;
  */
  
 // Delay avant la disparition du loader
-$loader-anim-delay :$anim-dur*3;
+$loader-anim-delay :$anim-dur*0;
 @keyframes display-loader {
     0%{
         opacity: 1;
@@ -365,7 +365,7 @@ main{
     &__name{
         display: flex;
         justify-content: center;
-        height: 100%;
+        height: 30%;
         flex-direction: column;
         background-color: white;
         padding-left: 1em;
@@ -506,46 +506,39 @@ main{
         flex-direction: row;
         justify-content: space-between;
         font-size: 16px;
+        
     }
-    &__show{
-        padding: 10px;
-        width: 95%;
-        
-        &:hover {
-            //width: 80%;
-            animation: width-item-show;
-            transition: 330ms ease-in-out;
+    &:hover {
+        &>.item__valid{
+            display: flex;
+            transition: 400ms ease-out;
             animation-duration: 2000ms;
-        
-        }
-    
-        &:hover +.item__valid{
-            animation: check-valid-move;
-            transition: 330ms ease-in-out;
-            animation-duration: 2000ms;
+            width: 50px;
+
             >.item__valid--anim{
+                transition: 500ms ease-out;
                 transform: rotate(360deg);
             }
         }
-
-        
+        &>.item__show{
+            transition: 330ms ease-out;
+            
+            width: 290px;
+        }
+    }
+    &__show{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 340px;
     }
     &__valid{
-        display: flex;
-        width: 50px;
+        
+        width: 0px;
         background-color: $tertiary_color;
         align-items: center;
         justify-content: center;
         color: white;
-        position: absolute;
-        height: 100%;
-        right: -50px;
-        &--anim{
-            transition-duration: 0.8s;
-            transition-property: transform;
-        }
-        
-       
     }
     
 }
@@ -561,7 +554,7 @@ main{
         background-color: $tertiary_color;
         height: 100%;
         width: $size;
-        animation: loader-bars $anim-dur both 3 ease-in-out;
+        animation: loader-bars $anim-dur both 2 ease-in-out;
         animation-delay: 200ms;
         transform: perspective(200px);
         

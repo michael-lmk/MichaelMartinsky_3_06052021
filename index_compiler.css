@@ -290,7 +290,7 @@ main {
 .restaurant__name {
   display: flex;
   justify-content: center;
-  height: 100%;
+  height: 30%;
   flex-direction: column;
   background-color: white;
   padding-left: 1em;
@@ -375,34 +375,34 @@ main {
   animation: animation-menu-item 1500ms both;
 }
 .menu__item--1 {
-  animation-delay: 6450ms;
+  animation-delay: 450ms;
 }
 .menu__item--2 {
-  animation-delay: 6600ms;
+  animation-delay: 600ms;
 }
 .menu__item--3 {
-  animation-delay: 6750ms;
+  animation-delay: 750ms;
 }
 .menu__item--4 {
-  animation-delay: 6900ms;
+  animation-delay: 900ms;
 }
 .menu__item--5 {
-  animation-delay: 7050ms;
+  animation-delay: 1050ms;
 }
 .menu__item--6 {
-  animation-delay: 7200ms;
+  animation-delay: 1200ms;
 }
 .menu__item--7 {
-  animation-delay: 7350ms;
+  animation-delay: 1350ms;
 }
 .menu__item--8 {
-  animation-delay: 7500ms;
+  animation-delay: 1500ms;
 }
 .menu__item--9 {
-  animation-delay: 7650ms;
+  animation-delay: 1650ms;
 }
 .menu__item--10 {
-  animation-delay: 7800ms;
+  animation-delay: 1800ms;
 }
 
 .item {
@@ -429,37 +429,32 @@ main {
   justify-content: space-between;
   font-size: 16px;
 }
-.item__show {
-  padding: 10px;
-  width: 95%;
-}
-.item__show:hover {
-  animation: width-item-show;
-  transition: 330ms ease-in-out;
+.item:hover > .item__valid {
+  display: flex;
+  transition: 400ms ease-out;
   animation-duration: 2000ms;
+  width: 50px;
 }
-.item__show:hover + .item__valid {
-  animation: check-valid-move;
-  transition: 330ms ease-in-out;
-  animation-duration: 2000ms;
-}
-.item__show:hover + .item__valid > .item__valid--anim {
+.item:hover > .item__valid > .item__valid--anim {
+  transition: 500ms ease-out;
   transform: rotate(360deg);
 }
-.item__valid {
+.item:hover > .item__show {
+  transition: 330ms ease-out;
+  width: 290px;
+}
+.item__show {
+  padding: 10px;
   display: flex;
-  width: 50px;
+  flex-direction: column;
+  width: 340px;
+}
+.item__valid {
+  width: 0px;
   background-color: #99E2D0;
   align-items: center;
   justify-content: center;
   color: white;
-  position: absolute;
-  height: 100%;
-  right: -50px;
-}
-.item__valid--anim {
-  transition-duration: 0.8s;
-  transition-property: transform;
 }
 
 .load {
@@ -472,7 +467,7 @@ main {
   background-color: #99E2D0;
   height: 100%;
   width: 3vh;
-  animation: loader-bars 2000ms both 3 ease-in-out;
+  animation: loader-bars 2000ms both 2 ease-in-out;
   animation-delay: 200ms;
   transform: perspective(200px);
 }
@@ -511,7 +506,7 @@ main {
   justify-content: center;
   align-items: center;
   animation: display-loader 2s;
-  animation-delay: 6000ms;
+  animation-delay: 0ms;
   animation-fill-mode: forwards;
   transform-origin: top;
 }
