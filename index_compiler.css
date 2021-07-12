@@ -548,6 +548,7 @@ main {
   .sec_menu .sec_menu_div {
     flex: 1;
     margin: 1em;
+    min-width: 30%;
   }
 
   .restaurant {

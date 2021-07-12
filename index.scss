@@ -273,7 +273,6 @@ main{
 // }
 
 $border-rad: 2rem;
-$clr-btn: #15DEA5;
 .btn {
     border-radius: $border-rad;
     background: $btn-color;
@@ -563,8 +562,6 @@ $clr-btn: #15DEA5;
             }
         }
         &>.item__show{
-           
-            
             min-width: 85%;
         }
     }
@@ -640,9 +637,11 @@ $clr-btn: #15DEA5;
     .sec_menu{
         display: flex;
         justify-content: space-between;
+        
         & .sec_menu_div {
             flex: 1;
             margin: 1em;
+            min-width: 30%;
         }
     }
     .restaurant{
