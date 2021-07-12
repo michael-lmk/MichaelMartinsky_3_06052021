@@ -258,18 +258,53 @@ main{
     background-color: lightgray;
 }
 
-.btn{
-    color: white;
+// .btn{
+//     color: white;
+//     background: $btn-color;
+//     text-decoration: none;
+//     padding: 1em;
+//     border-radius: 80em;
+//     @include box-shadow($val: 5px);
+//     border: none;
+//     &:active, &:hover{
+//         background: $btn-color-lighten;
+//     }
+// }
+
+$border-rad: 2rem;
+$clr-btn: #15DEA5;
+.btn {
+    border-radius: $border-rad;
     background: $btn-color;
-    text-decoration: none;
-    padding: 1em;
-    border-radius: 80em;
-    @include box-shadow($val: 5px);
+    position: relative;
+    z-index: 1;
     border: none;
-    &:active, &:hover{
-        background: $btn-color-lighten;
+    color: white;
+    padding: 1em;
+    @include box-shadow($val: 5px);
+    &:hover {
+        &::after {
+            opacity: 1;
     }
 }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $btn-color-lighten;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+        border-radius: $border-rad;
+
+        
+    }
+}
+
+
 
 .order{
     display: flex;
