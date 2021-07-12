@@ -517,35 +517,40 @@ main{
     }
     &:hover {
         &>.item__valid{
-            display: flex;
-            transition: 400ms ease-out;
+
             animation-duration: 2000ms;
-            width: 50px;
+            width: 60px;
 
             >.item__valid--anim{
-                transition: 500ms ease-out;
+                
                 transform: rotate(360deg);
             }
         }
         &>.item__show{
-            transition: 330ms ease-out;
+           
             
-            width: 290px;
+            min-width: 85%;
         }
     }
     &__show{
         padding: 10px 0 10px 0;
         display: flex;
         flex-direction: column;
-        width: 340px;
+        width: 100%;
+        transition: all 400ms ease-out;
     }
     &__valid{
-        
+        display: flex;
+        transition: all 400ms ease-out;
         width: 0px;
         background-color: $tertiary_color;
         align-items: center;
         justify-content: center;
         color: white;
+    }
+    &__valid--anim{
+        transition: transform 500ms ease-out;
+        color: #f7f7f7;
     }
     
 }
