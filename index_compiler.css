@@ -540,4 +540,29 @@ main {
   padding-left: 10px;
 }
 
+@media (min-width: 1100px) {
+  .sec_menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  .sec_menu .sec_menu_div {
+    flex: 1;
+    margin: 1em;
+  }
+
+  .restaurant {
+    margin: 1em;
+  }
+
+  .restaurant-list {
+    display: flex;
+    margin: 1em;
+  }
+
+  .header__img-resto {
+    margin-top: -20%;
+    margin-bottom: -20%;
+  }
+}
+
 /*# sourceMappingURL=index_compiler.css.map */
