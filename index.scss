@@ -33,7 +33,8 @@ $anim-delay-item: $anim-dur-item / $num-item;
 
 /**
  * Réduit la div des menu pour laisser
- * apparaitre l'animation de l'ajout du plat au panier
+ * apparaitre l'animation de l'ajout du plat au panier 
+ * non utiliser
  */
 @keyframes width-item-show {
     0% {
@@ -59,7 +60,7 @@ $anim-delay-item: $anim-dur-item / $num-item;
 
 /**
  * Animation qui déplace la div d'ajout au panier
- * 
+ * non utiliser
  */
 @keyframes check-valid-move {
     0% {
@@ -419,9 +420,12 @@ $border-rad: 2rem;
     &--2{
         display: flex!important;
         position: absolute;
-        color: white;
+        transition: all linear 0.2s;
+        background: -webkit-gradient(linear, left bottom, right top, from($primary_color), to($second_color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         z-index: 1;
-        
+        opacity: 0;
         
     }
     &--1{
@@ -436,19 +440,15 @@ $border-rad: 2rem;
     &:hover{
         .restaurant__heart--2{
             display: flex!important;
-            //color: $primary_color;
             transition: all linear 0.2s;
             background: -webkit-gradient(linear, left bottom, right top, from($primary_color), to($second_color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            opacity: 1;
         }
         
     }
 }
-
-// .azer:before {
-//     content: "\f004";
-// }
 
 .footer{
     background-color: $footer-color;
@@ -551,10 +551,8 @@ $border-rad: 2rem;
     }
     &:hover {
         &>.item__valid{
-
-            animation-duration: 2000ms;
+           
             width: 60px;
-
             >.item__valid--anim{
                 
                 transform: rotate(360deg);
@@ -600,7 +598,7 @@ $border-rad: 2rem;
         width: $size;
         animation: loader-bars $anim-dur both 2 ease-in-out;
         animation-delay: 200ms;
-        transform: perspective(200px);
+        //transform: perspective(200px);
         
         @for $i from 1 through $num-bars {
             &--#{$i} {
@@ -632,7 +630,12 @@ $border-rad: 2rem;
 }
 
 
-@media (min-width: 1100px) {
+/***********************/
+/*      BREAK POINT    */
+/***********************/
+
+
+@media (min-width: 1000px) {
     .sec_menu{
         display: flex;
         justify-content: space-between;

@@ -15,7 +15,8 @@
 }
 /**
  * Réduit la div des menu pour laisser
- * apparaitre l'animation de l'ajout du plat au panier
+ * apparaitre l'animation de l'ajout du plat au panier 
+ * non utiliser
  */
 @keyframes width-item-show {
   0% {
@@ -33,7 +34,7 @@
 }
 /**
  * Animation qui déplace la div d'ajout au panier
- * 
+ * non utiliser
  */
 @keyframes check-valid-move {
   0% {
@@ -199,6 +200,7 @@ main {
   border: none;
   color: white;
   padding: 1em;
+  text-decoration: none;
   box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
 .btn:hover::after {
@@ -320,8 +322,12 @@ main {
 .restaurant__heart--2 {
   display: flex !important;
   position: absolute;
-  color: white;
+  transition: all linear 0.2s;
+  background: -webkit-gradient(linear, left bottom, right top, from(#9356dc), to(#ff79da));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   z-index: 1;
+  opacity: 0;
 }
 .restaurant__heart--1 {
   display: flex !important;
@@ -337,6 +343,7 @@ main {
   background: -webkit-gradient(linear, left bottom, right top, from(#9356dc), to(#ff79da));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 1;
 }
 
 .footer {
@@ -452,7 +459,6 @@ main {
   font-size: 16px;
 }
 .item:hover > .item__valid {
-  animation-duration: 2000ms;
   width: 60px;
 }
 .item:hover > .item__valid > .item__valid--anim {
@@ -494,7 +500,6 @@ main {
   width: 3vh;
   animation: loader-bars 2000ms both 2 ease-in-out;
   animation-delay: 200ms;
-  transform: perspective(200px);
 }
 .load__bar--1 {
   animation-delay: 125ms;
@@ -540,7 +545,10 @@ main {
   padding-left: 10px;
 }
 
-@media (min-width: 1100px) {
+/***********************/
+/*      BREAK POINT    */
+/***********************/
+@media (min-width: 1000px) {
   .sec_menu {
     display: flex;
     justify-content: space-between;
